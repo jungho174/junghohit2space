@@ -15,12 +15,10 @@
   gtag('config', 'G-PGPED1N7R1');
 </script>
 
-
 </head>
 
-<body background="castle2.png">
+<body>
     
-
     <a href="https://hit2.nexon.com/main" target="_blank" title="hit2 공식홈페이지">
         <img src="hit2넥슨포럼bottom.png" width="100%" ></a>
 
@@ -40,20 +38,53 @@
 
     <img src="키키메롱.gif" width="50%"><img src="키키메롱.gif" width="50%">
     <br>
-    <img src="키키엉덩이2.webp" width="50%"><img src="키키엉덩이2.webp" width="50%">
-    <br>
-    <img src="키키엉덩이1.gif" width="50%"><img src="키키엉덩이1.gif" width="50%">
-    <br>
     <br>
 
-    <input type="button" value="어둠의다크니스" 
-    title="크캬컄컄" 
-    onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    alert('크크킄');
+    <script> body = document.querySelector('body')</script>
+
+    <input type="button" value="dark mode" title="다크모드" onclick="
+
+    body.style.backgroundColor='black';
+    body.style.color='white';
     ">
 
+    <input type="button" value="light mode" title="라이트모드" 
+    onclick="
+    body.style.backgroundColor='white';
+    body.style.color='black';
+    ">
+    <br><br>
+
+    <input id="night_day" type="button" value="다크모드" title="뭘 꼬나봐" onclick="
+
+    if(this.value === '다크모드'){
+
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        this.value = '라이트모드';
+
+        var i = 0;
+        var alist = document.querySelectorAll('a');
+        while(i<alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i+1;
+        }
+            
+            
+    }
+    else{
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        this.value = '다크모드';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i+1;
+        }
+    }
+    "
     
     <div id="disqus_thread"></div>
 <script>
@@ -74,7 +105,6 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
 
 </body>
 </html>
